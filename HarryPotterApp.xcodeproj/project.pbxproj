@@ -35,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE536A4127D14BD40011D0D3 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		EE536A4527D14C630011D0D3 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Domain; sourceTree = "<group>"; };
+		EE536A4927D14C930011D0D3 /* Presentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Presentation; sourceTree = "<group>"; };
 		EEB4FB6E27CFC4AB00E4BBEC /* HarryPotterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB4FB7127CFC4AB00E4BBEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB4FB7327CFC4AB00E4BBEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +82,9 @@
 		EEB4FB6527CFC4AB00E4BBEC = {
 			isa = PBXGroup;
 			children = (
+				EE536A4127D14BD40011D0D3 /* Data */,
+				EE536A4527D14C630011D0D3 /* Domain */,
+				EE536A4927D14C930011D0D3 /* Presentation */,
 				EEB4FB7027CFC4AB00E4BBEC /* HarryPotterApp */,
 				EEB4FB8727CFC4B700E4BBEC /* HarryPotterAppTests */,
 				EEB4FB9227CFC4B700E4BBEC /* HarryPotterAppUITests */,
