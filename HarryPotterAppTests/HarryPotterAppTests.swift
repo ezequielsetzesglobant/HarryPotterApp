@@ -1,10 +1,3 @@
-//
-//  HarryPotterAppTests.swift
-//  HarryPotterAppTests
-//
-//  Created by Ezequiel Hernan Setzes on 02/03/2022.
-//
-
 import XCTest
 @testable import HarryPotterApp
 
