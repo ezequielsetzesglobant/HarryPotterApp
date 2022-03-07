@@ -144,12 +144,15 @@
 				EEB4FB6A27CFC4AB00E4BBEC /* Sources */,
 				EEB4FB6B27CFC4AB00E4BBEC /* Frameworks */,
 				EEB4FB6C27CFC4AB00E4BBEC /* Resources */,
+				EE4FF7FB27D273D500CCDB1E /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = HarryPotterApp;
+			packageProductDependencies = (
+			);
 			productName = HarryPotterApp;
 			productReference = EEB4FB6E27CFC4AB00E4BBEC /* HarryPotterApp.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +224,8 @@
 				Base,
 			);
 			mainGroup = EEB4FB6527CFC4AB00E4BBEC;
+			packageReferences = (
+			);
 			productRefGroup = EEB4FB6F27CFC4AB00E4BBEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +263,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EE4FF7FB27D273D500CCDB1E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=~/.mint/bin:$PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EEB4FB6A27CFC4AB00E4BBEC /* Sources */ = {
