@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE19CE5827D7DA630008DCB9 /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = EE19CE5727D7DA630008DCB9 /* Presentation */; };
+		EE19CE5D27D7DAD80008DCB9 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = EE19CE5C27D7DAD80008DCB9 /* Domain */; };
+		EE19CE5F27D7DADD0008DCB9 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = EE19CE5E27D7DADD0008DCB9 /* Data */; };
 		EEB4FB7227CFC4AB00E4BBEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB4FB7127CFC4AB00E4BBEC /* AppDelegate.swift */; };
 		EEB4FB7427CFC4AB00E4BBEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB4FB7327CFC4AB00E4BBEC /* SceneDelegate.swift */; };
-		EEB4FB7627CFC4AB00E4BBEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB4FB7527CFC4AB00E4BBEC /* ViewController.swift */; };
 		EEB4FB7927CFC4AB00E4BBEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB4FB7727CFC4AB00E4BBEC /* Main.storyboard */; };
 		EEB4FB7B27CFC4B700E4BBEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB4FB7A27CFC4B700E4BBEC /* Assets.xcassets */; };
 		EEB4FB7E27CFC4B700E4BBEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB4FB7C27CFC4B700E4BBEC /* LaunchScreen.storyboard */; };
@@ -41,7 +43,6 @@
 		EEB4FB6E27CFC4AB00E4BBEC /* HarryPotterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB4FB7127CFC4AB00E4BBEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB4FB7327CFC4AB00E4BBEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EEB4FB7527CFC4AB00E4BBEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EEB4FB7827CFC4AB00E4BBEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEB4FB7A27CFC4B700E4BBEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEB4FB7D27CFC4B700E4BBEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE19CE5D27D7DAD80008DCB9 /* Domain in Frameworks */,
+				EE19CE5827D7DA630008DCB9 /* Presentation in Frameworks */,
+				EE19CE5F27D7DADD0008DCB9 /* Data in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +83,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE19CE5627D7DA630008DCB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EEB4FB6527CFC4AB00E4BBEC = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +100,7 @@
 				EEB4FB8727CFC4B700E4BBEC /* HarryPotterAppTests */,
 				EEB4FB9227CFC4B700E4BBEC /* HarryPotterAppUITests */,
 				EEB4FB6F27CFC4AB00E4BBEC /* Products */,
+				EE19CE5627D7DA630008DCB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +119,6 @@
 			children = (
 				EEB4FB7127CFC4AB00E4BBEC /* AppDelegate.swift */,
 				EEB4FB7327CFC4AB00E4BBEC /* SceneDelegate.swift */,
-				EEB4FB7527CFC4AB00E4BBEC /* ViewController.swift */,
 				EEB4FB7727CFC4AB00E4BBEC /* Main.storyboard */,
 				EEB4FB7A27CFC4B700E4BBEC /* Assets.xcassets */,
 				EEB4FB7C27CFC4B700E4BBEC /* LaunchScreen.storyboard */,
@@ -152,6 +163,9 @@
 			);
 			name = HarryPotterApp;
 			packageProductDependencies = (
+				EE19CE5727D7DA630008DCB9 /* Presentation */,
+				EE19CE5C27D7DAD80008DCB9 /* Domain */,
+				EE19CE5E27D7DADD0008DCB9 /* Data */,
 			);
 			productName = HarryPotterApp;
 			productReference = EEB4FB6E27CFC4AB00E4BBEC /* HarryPotterApp.app */;
@@ -289,7 +303,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEB4FB7627CFC4AB00E4BBEC /* ViewController.swift in Sources */,
 				EEB4FB7227CFC4AB00E4BBEC /* AppDelegate.swift in Sources */,
 				EEB4FB7427CFC4AB00E4BBEC /* SceneDelegate.swift in Sources */,
 			);
@@ -618,6 +631,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE19CE5727D7DA630008DCB9 /* Presentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Presentation;
+		};
+		EE19CE5C27D7DAD80008DCB9 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		EE19CE5E27D7DADD0008DCB9 /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEB4FB6627CFC4AB00E4BBEC /* Project object */;
 }
