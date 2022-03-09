@@ -7,6 +7,11 @@ class MainViewController: UIViewController {
     // MARK: - Properties
     
     var coordinator: CoordinatorProtocol?
+    lazy var selfView: MainView = {
+        let view = MainView(frame: UIScreen.main.bounds)
+        view.delegate = self
+        return view
+    }()
     
     // MARK: - Setup
     
@@ -26,7 +31,39 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        view.backgroundColor = .red
+        setUpUI()
+    }
+    
+    func setUpUI() {
+        view = selfView
+    }
+}
+
+// MARK: - Extensions
+
+extension MainViewController: MainViewDelegate {
+    
+    func griffindorImagePressed() {
+        print("griffindor")
+    }
+
+    func slytherinImagePressed() {
+        print("slytherin")
+    }
+
+    func hufflepuffImagePressed() {
+        print("hufflepuff")
+    }
+
+    func ravenclawImagePressed() {
+        print("ravenclaw")
+    }
+
+    func spellsButtonPressed() {
+        print("spells")
+    }
+
+    func wizardsButtonPressed() {
+        print("wizards")
     }
 }
