@@ -1,5 +1,7 @@
 import UIKit
 
+// MARK: - Class
+
 public class AppCoordinator: CoordinatorProtocol {
 
     public var rootViewController: UINavigationController
