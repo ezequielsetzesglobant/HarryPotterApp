@@ -1,33 +1,14 @@
+name: Swift
 
-name: CI on Push and Pull Request
-
-on: [push, pull_request]
+on: [push]
 
 jobs:
-  Practice:
+  build:
+
     runs-on: macos-latest
+
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
+      - uses: actions/checkout@v2
+      - name: Build
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
-    - name: Show what's in the directory
-      run: |
-        ls
-    - name: Show what all is in the parent directory
-      run: |
-        cd ..
-        ls
-        
-  iOS:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: iOS
-      run: |
-        cd HarryPotterApp
-        nuget restore
-        msbuild HarryPotterApp.iOS/HarryPotterApp.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
+          xcodebuild clean test -project "HarryPotterApp.xcproject" -scheme "HarryPotterApp" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
