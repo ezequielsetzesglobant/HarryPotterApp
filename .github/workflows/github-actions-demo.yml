@@ -3,16 +3,16 @@ name: Swift
 on: [push]
 
 jobs:
-    build:
-    
-    runs-on: macos-latest
-    
-    steps:
-        - uses: actions/checkout@v2
-        - name: Build
-        run: |
-                xcodebuild clean build -project "HarryPotterApp.xcproject" -scheme "HarryPotterApp" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+  build:
 
-        - name: Test
-        run: |
-                xcodebuild clean test -project "HarryPotterApp.xcproject" -scheme "HarryPotterAppTests" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fwal/setup-swift@2040b795e5c453c3a05fcb8316496afc8a74f192
+        with:
+          swift-version: "5.3.2"
+      - name: Build
+        run: swift build
+      - name: Run tests
+        run: swift test
