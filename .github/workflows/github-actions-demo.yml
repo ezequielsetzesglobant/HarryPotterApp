@@ -1,18 +1,18 @@
-name: Swift
-
-on: [push]
-
+name: Testing
+on:
+  pull_request:
+    branches:
+    - master
 jobs:
-  build:
-
-    runs-on: macos-latest
-
+  test:
+    name: Testing Swift Package and iOS app
+    runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: fwal/setup-swift@2040b795e5c453c3a05fcb8316496afc8a74f192
-        with:
-          swift-version: "5.3.2"
-      - name: Build
-        run: swift build
-      - name: Run tests
-        run: swift test
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Force XCode 11.3
+        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+      - name: Testing Swift package
+        run: exec ./.github/scripts/test_swift_package.sh
+      - name: Testing iOS app
+        run: exec ./.github/scripts/test_app.sh
