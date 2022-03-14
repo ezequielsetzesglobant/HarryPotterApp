@@ -1,10 +1,10 @@
-// swift-tools-version:5.5.0
+// swift-tools-version:5.3.0
 
 import PackageDescription
 
 let package = Package(
     name: "Presentation",
-    platforms: [.iOS(.v15)],
+    platforms: [.iOS(.v12],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
