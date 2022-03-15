@@ -1,7 +1,8 @@
 import UIKit
 
 public protocol CoordinatorProtocol {
+    var rootViewController: UINavigationController { get }
     func start()
     func goToMainViewController()
-    var rootViewController: UINavigationController { get }
+    func goToTabBarController()
 }

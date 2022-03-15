@@ -44,19 +44,19 @@ class MainViewController: UIViewController {
 extension MainViewController: MainViewDelegate {
     
     func griffindorImagePressed() {
-        print("griffindor")
+        coordinator?.goToTabBarController()
     }
 
     func slytherinImagePressed() {
-        print("slytherin")
+        coordinator?.goToTabBarController()
     }
 
     func hufflepuffImagePressed() {
-        print("hufflepuff")
+        coordinator?.goToTabBarController()
     }
 
     func ravenclawImagePressed() {
-        print("ravenclaw")
+        coordinator?.goToTabBarController()
     }
 
     func spellsButtonPressed() {
