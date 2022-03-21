@@ -4,28 +4,28 @@
 import PackageDescription
 
 let package = Package(
-    name: "Data",
+    name: "DI",
     platforms: [.iOS(.v12)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Data",
-            targets: ["Data"])
+            name: "DI",
+            targets: ["DI"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(name: "Domain", path: "../Domain"),
-        .package(url: "https://github.com/Moya/Moya.git", .upToNextMajor(from: "15.0.0"))
+        //.package(name: "Data", path: "../Data"),
+        //.package(name: "Domain", path: "../Domain")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "Data",
-            dependencies: ["Domain", "Moya"]),
+            name: "DI",
+            dependencies: [/*"Data", "Domain"*/]),
         .testTarget(
-            name: "DataTests",
-            dependencies: ["Data"])
+            name: "DITests",
+            dependencies: ["DI"]),
     ]
 )

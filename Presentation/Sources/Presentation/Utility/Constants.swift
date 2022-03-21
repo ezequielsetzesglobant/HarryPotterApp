@@ -10,4 +10,5 @@ public struct Color {
 
 struct Strings {
     static let coderNotImplementedError: String = "init(coder:) has not been implemented"
+    static let emptyString: String = ""
 }

@@ -1,10 +1,7 @@
 import Foundation
 
 protocol MainViewInputDelegate: AnyObject {
-    func griffindorImagePressed()
-    func slytherinImagePressed()
-    func hufflepuffImagePressed()
-    func ravenclawImagePressed()
+    func imagePressed(id: String)
     func spellsButtonPressed()
     func wizardsButtonPressed()
 }
