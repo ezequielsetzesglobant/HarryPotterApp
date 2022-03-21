@@ -2,9 +2,9 @@ import Foundation
 
 public struct HeadViewData {
 
-    let id: String
-    let firstName: String
-    let lastName: String
+    public let id: String
+    public let firstName: String
+    public let lastName: String
 
     public init(id: String,
                 firstName: String,

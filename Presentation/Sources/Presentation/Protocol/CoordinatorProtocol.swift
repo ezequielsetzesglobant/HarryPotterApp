@@ -4,5 +4,5 @@ public protocol CoordinatorProtocol {
     var rootViewController: UINavigationController { get }
     func start()
     func goToMainViewController()
-    func goToTabBarController(id: String)
+    func goToTabBarController(house: Houses)
 }

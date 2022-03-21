@@ -2,16 +2,16 @@ import Foundation
 
 public struct HouseViewData {
 
-    let id: String
-    let name: String
-    let houseColours: String
-    let founder: String
-    let animal: String
-    let element: String
-    let ghost: String
-    let commonRoom: String
-    let heads: [HeadViewData]
-    let traits: [TraitViewData]
+    public let id: String
+    public let name: String
+    public let houseColours: String
+    public let founder: String
+    public let animal: String
+    public let element: String
+    public let ghost: String
+    public let commonRoom: String
+    public let heads: [HeadViewData]
+    public let traits: [TraitViewData]
 
     public init(id: String,
                 name: String,

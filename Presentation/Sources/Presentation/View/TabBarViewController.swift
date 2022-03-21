@@ -11,7 +11,8 @@ private struct Constants {
     static let tabBarSecondItemImage: String = "head_image"
     static let tabBarThirdItemImage: String = "trait_image"
     static let tabBarFirstItemIndex: Int = 0
-    static let tabBarLastItemIndex: Int = 2
+    static let tabBarSecondItemIndex: Int = 1
+    static let tabBarThirdItemIndex: Int = 2
     static let imageList: [String] = [
         Constants.tabBarFirstItemImage,
         Constants.tabBarSecondItemImage,
@@ -30,42 +31,46 @@ class TabBarViewController: UITabBarController {
 
     // MARK: - Properties
     
-    var viewModel: TabBarViewModelProtocol
-    var houseId: String = Strings.emptyString
-    
-    // MARK: - Initialization
-    
-    init(viewModel: TabBarViewModelProtocol) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError(Strings.coderNotImplementedError)
+    var viewModel: TabBarViewModelProtocol? {
+        didSet {
+            setUpViewModel()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
         guard let items = tabBar.items else { return }
-        for index in Constants.tabBarFirstItemIndex...Constants.tabBarLastItemIndex {
+        for index in Constants.tabBarFirstItemIndex...Constants.tabBarThirdItemIndex {
             viewControllers?[index].title = Constants.titleList[index]
             items[index].image =
                 UIImage.init(named: Constants.imageList[index])?.withRenderingMode(UIImage.RenderingMode.automatic)
             items[index].selectedImage =
                 UIImage.init(named: Constants.imageList[index])?.withRenderingMode(UIImage.RenderingMode.automatic)
         }
-        setUpViewModel()
-        viewModel.getHouse(id: houseId)
     }
     
     func setUpViewModel() {
-        viewModel.onFetchHouse = { [weak self] houseViewData in
-            self?.displayHouseInformationBetweenTabs(houseViewData: houseViewData)
+        viewModel?.onFetchHouse = { [weak self] in
+            self?.displayHouseInformationBetweenTabs()
+        }
+        viewModel?.onError = { [weak self] messageError in
+            self?.displayError(messageError: messageError)
         }
     }
     
-    func displayHouseInformationBetweenTabs(houseViewData: HouseViewData) {
-        print(houseViewData)
+    func displayHouseInformationBetweenTabs() {
+        let detailInformationViewController =
+            viewControllers?[Constants.tabBarFirstItemIndex] as? DetailInformationViewController
+        detailInformationViewController?.viewModel = viewModel?.detailInformationViewModel
+        let headViewController = viewControllers?[Constants.tabBarSecondItemIndex] as? HeadViewController
+        headViewController?.viewModel = viewModel?.headViewModel
+        let traitViewController = viewControllers?[Constants.tabBarThirdItemIndex] as? TraitViewController
+        traitViewController?.viewModel = viewModel?.traitViewModel
+        AlertHelper.shared.showAlertMessage(title: viewModel?.houseViewData?.name ?? "", viewController: self)
+    }
+    
+    func displayError(messageError: String) {
+        AlertHelper.shared.showAlertMessage(title: messageError, viewController: self)
     }
 }

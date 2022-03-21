@@ -12,6 +12,11 @@ class HeadViewController: UIViewController {
         view.backgroundColor = .blue
         return view
     }()
+    var viewModel: HeadViewModelInputProtocol?  {
+        didSet {
+            //Cargar vista
+        }
+    }
     
     // MARK: - Initialization
     

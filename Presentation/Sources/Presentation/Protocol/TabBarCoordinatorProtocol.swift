@@ -1,7 +1,7 @@
 import Foundation
 
 protocol TabBarCoordinatorInputProtocol: AnyObject {
-    func start(id: String)
+    func start(house: Houses)
 }
 
 protocol TabBarCoordinatorOutputProtocol: AnyObject {

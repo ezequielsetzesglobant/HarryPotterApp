@@ -1,7 +1,6 @@
 import UIKit
 import Domain
 import Data
-//import DI
 
 private struct Constants {
     static let tabBarSelectedIndex: Int = 0
@@ -15,8 +14,7 @@ public class TabBarCoordinator: TabBarCoordinatorProtocol {
 
     public var coordinator: CoordinatorProtocol
     lazy var tabBarViewController: TabBarViewController = {
-        return TabBarViewController(viewModel: TabBarViewModel(useCase: GetHouseUseCase(provider: Provider())))
-        //return InjectorPresentation.shared.getTabBarViewController
+        return TabBarViewController()
     }()
     lazy var detailInformationViewController: DetailInformationViewController = {
         return DetailInformationViewController(coordinator: self)
@@ -34,12 +32,13 @@ public class TabBarCoordinator: TabBarCoordinatorProtocol {
         self.coordinator = coordinator
     }
 
-    public func start(id: String) {
-        setUpTabs(id: id)
+    public func start(house: Houses) {
+        setUpTabs(house: house)
     }
     
-    private func setUpTabs(id: String) {
-        tabBarViewController.houseId = id
+    private func setUpTabs(house: Houses) {
+        tabBarViewController.viewModel = TabBarViewModel(useCase: GetHouseUseCase(provider: Provider()),
+                                                         houseId: house.rawValue)
         tabBarViewController.setViewControllers([detailInformationViewController,
                                                  headViewController,
                                                  traitViewController],

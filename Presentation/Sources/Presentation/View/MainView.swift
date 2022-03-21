@@ -31,10 +31,6 @@ private struct Constants {
     static let buttonTop: CGFloat = 120
     static let buttonConstantHeight: CGFloat = 60
     static let buttonConstantWidth: CGFloat = 140
-    static let griffindorId: String = "0367baf3-1cb6-4baf-bede-48e17e1cd005"
-    static let slytherinId: String = "a9704c47-f92e-40a4-8771-ed1899c9b9c1"
-    static let hufflepuffId: String = "85af6295-fd01-4170-a10b-963dd51dce14"
-    static let ravenclawId: String = "805fd37a-65ae-4fe5-b336-d767b8b7c73a"
 }
 
 // MARK: - Class
@@ -263,19 +259,19 @@ class MainView: UIView {
 @objc extension MainView {
 
     func griffindorImageTapped() {
-        delegate?.imagePressed(id: Constants.griffindorId)
+        delegate?.imagePressed(house: .griffindor)
     }
 
     func slytherinImageTapped() {
-        delegate?.imagePressed(id: Constants.slytherinId)
+        delegate?.imagePressed(house: .slytherin)
     }
 
     func hufflepuffImageTapped() {
-        delegate?.imagePressed(id: Constants.hufflepuffId)
+        delegate?.imagePressed(house: .hufflepuff)
     }
 
     func ravenclawImageTapped() {
-        delegate?.imagePressed(id: Constants.ravenclawId) 
+        delegate?.imagePressed(house: .ravenclaw)
     }
 
     func spellsButtonTapped() {
