@@ -1,7 +1,7 @@
 import Foundation
 
 protocol MainViewInputDelegate: AnyObject {
-    func imagePressed(house: Houses)
+    func imagePressed(houseID: HousesID)
     func spellsButtonPressed()
     func wizardsButtonPressed()
 }

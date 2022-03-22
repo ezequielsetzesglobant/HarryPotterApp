@@ -29,7 +29,7 @@ class TabBarCoordinatorTest: XCTestCase {
             handler: nil
         )
 
-        coordinator.start(house: .griffindor)
+        coordinator.start(houseID: .griffindor)
 
         wait(for: [presentExpectation], timeout: 5)
     }

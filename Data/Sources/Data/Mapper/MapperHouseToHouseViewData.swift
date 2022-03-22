@@ -3,7 +3,7 @@ import Domain
 
 extension House {
 
-    func transformHouseToHouseViewData() -> HouseViewData {
+    func toDomain() -> HouseViewData {
         return HouseViewData(id: self.id,
                              name: self.name ?? ConstantsUtils.stringDefault,
                              houseColours: self.houseColours ?? ConstantsUtils.stringDefault,

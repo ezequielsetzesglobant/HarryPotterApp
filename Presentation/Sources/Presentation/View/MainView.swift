@@ -259,19 +259,19 @@ class MainView: UIView {
 @objc extension MainView {
 
     func griffindorImageTapped() {
-        delegate?.imagePressed(house: .griffindor)
+        delegate?.imagePressed(houseID: .griffindor)
     }
 
     func slytherinImageTapped() {
-        delegate?.imagePressed(house: .slytherin)
+        delegate?.imagePressed(houseID: .slytherin)
     }
 
     func hufflepuffImageTapped() {
-        delegate?.imagePressed(house: .hufflepuff)
+        delegate?.imagePressed(houseID: .hufflepuff)
     }
 
     func ravenclawImageTapped() {
-        delegate?.imagePressed(house: .ravenclaw)
+        delegate?.imagePressed(houseID: .ravenclaw)
     }
 
     func spellsButtonTapped() {

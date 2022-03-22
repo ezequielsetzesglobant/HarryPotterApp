@@ -32,13 +32,13 @@ public class TabBarCoordinator: TabBarCoordinatorProtocol {
         self.coordinator = coordinator
     }
 
-    public func start(house: Houses) {
-        setUpTabs(house: house)
+    public func start(houseID: HousesID) {
+        setUpTabs(houseID: houseID)
     }
     
-    private func setUpTabs(house: Houses) {
+    private func setUpTabs(houseID: HousesID) {
         tabBarViewController.viewModel = TabBarViewModel(useCase: GetHouseUseCase(provider: Provider()),
-                                                         houseId: house.rawValue)
+                                                         houseID: houseID.rawValue)
         tabBarViewController.setViewControllers([detailInformationViewController,
                                                  headViewController,
                                                  traitViewController],

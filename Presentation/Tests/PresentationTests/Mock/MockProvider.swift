@@ -5,7 +5,7 @@ import Domain
 
 class MockProviderSucces: ProviderProtocol {
     
-    func retrieveHouse(id: String, onCompletion: @escaping (Result<HouseViewData, ProviderError>) -> Void) {
+    func retrieveHouse(houseID: String, onCompletion: @escaping (Result<HouseViewData, ProviderError>) -> Void) {
         onCompletion(.success(HouseViewData(id: "id",
                                             name: "name",
                                             houseColours: "houseColours",
@@ -26,7 +26,7 @@ class MockProviderSucces: ProviderProtocol {
 
 class MockProviderFailure: ProviderProtocol {
     
-    func retrieveHouse(id: String, onCompletion: @escaping (Result<HouseViewData, ProviderError>) -> Void) {
+    func retrieveHouse(houseID: String, onCompletion: @escaping (Result<HouseViewData, ProviderError>) -> Void) {
         onCompletion(.failure(.error("error")))
     }
 }

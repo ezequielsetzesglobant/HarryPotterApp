@@ -3,7 +3,7 @@ import Domain
 
 class HeadViewModel: HeadViewModelProtocol {
     
-    var heads: [HeadViewData]
+    let heads: [HeadViewData]
     
     init(heads: [HeadViewData]) {
         self.heads = heads

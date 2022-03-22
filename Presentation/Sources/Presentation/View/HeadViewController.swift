@@ -12,9 +12,9 @@ class HeadViewController: UIViewController {
         view.backgroundColor = .blue
         return view
     }()
-    var viewModel: HeadViewModelInputProtocol?  {
+    var viewModel: HeadViewModelInputProtocol? {
         didSet {
-            //Cargar vista
+            //Load view
         }
     }
     

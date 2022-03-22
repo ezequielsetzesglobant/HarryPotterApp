@@ -28,7 +28,7 @@ public class AppCoordinator: CoordinatorProtocol {
         rootViewController.pushViewController(mainViewController, animated: false)
     }
     
-    public func goToTabBarController(house: Houses) {
-        tabBarCoordinator.start(house: house)
+    public func goToTabBarController(houseID: HousesID) {
+        tabBarCoordinator.start(houseID: houseID)
     }
 }

@@ -14,7 +14,7 @@ struct Strings {
     static let okMessage: String = "Ok"
 }
 
-public enum Houses: String {
+public enum HousesID: String {
     case griffindor = "0367baf3-1cb6-4baf-bede-48e17e1cd005"
     case slytherin = "a9704c47-f92e-40a4-8771-ed1899c9b9c1"
     case hufflepuff = "85af6295-fd01-4170-a10b-963dd51dce14"

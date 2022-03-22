@@ -10,7 +10,6 @@
 		EE19CE5827D7DA630008DCB9 /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = EE19CE5727D7DA630008DCB9 /* Presentation */; };
 		EE19CE5D27D7DAD80008DCB9 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = EE19CE5C27D7DAD80008DCB9 /* Domain */; };
 		EE19CE5F27D7DADD0008DCB9 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = EE19CE5E27D7DADD0008DCB9 /* Data */; };
-		EEB1D4F427E4E2BA007751BA /* DI in Frameworks */ = {isa = PBXBuildFile; productRef = EEB1D4F327E4E2BA007751BA /* DI */; };
 		EEB4FB7227CFC4AB00E4BBEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB4FB7127CFC4AB00E4BBEC /* AppDelegate.swift */; };
 		EEB4FB7427CFC4AB00E4BBEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB4FB7327CFC4AB00E4BBEC /* SceneDelegate.swift */; };
 		EEB4FB7927CFC4AB00E4BBEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB4FB7727CFC4AB00E4BBEC /* Main.storyboard */; };
@@ -41,7 +40,6 @@
 		EE536A4127D14BD40011D0D3 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
 		EE536A4527D14C630011D0D3 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Domain; sourceTree = "<group>"; };
 		EE536A4927D14C930011D0D3 /* Presentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Presentation; sourceTree = "<group>"; };
-		EEB1D4EF27E4E2A4007751BA /* DI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DI; sourceTree = "<group>"; };
 		EEB4FB6E27CFC4AB00E4BBEC /* HarryPotterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB4FB7127CFC4AB00E4BBEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB4FB7327CFC4AB00E4BBEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				EE19CE5D27D7DAD80008DCB9 /* Domain in Frameworks */,
 				EE19CE5827D7DA630008DCB9 /* Presentation in Frameworks */,
 				EE19CE5F27D7DADD0008DCB9 /* Data in Frameworks */,
-				EEB1D4F427E4E2BA007751BA /* DI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +93,6 @@
 		EEB4FB6527CFC4AB00E4BBEC = {
 			isa = PBXGroup;
 			children = (
-				EEB1D4EF27E4E2A4007751BA /* DI */,
 				EE536A4127D14BD40011D0D3 /* Data */,
 				EE536A4527D14C630011D0D3 /* Domain */,
 				EE536A4927D14C930011D0D3 /* Presentation */,
@@ -170,7 +166,6 @@
 				EE19CE5727D7DA630008DCB9 /* Presentation */,
 				EE19CE5C27D7DAD80008DCB9 /* Domain */,
 				EE19CE5E27D7DADD0008DCB9 /* Data */,
-				EEB1D4F327E4E2BA007751BA /* DI */,
 			);
 			productName = HarryPotterApp;
 			productReference = EEB4FB6E27CFC4AB00E4BBEC /* HarryPotterApp.app */;
@@ -649,10 +644,6 @@
 		EE19CE5E27D7DADD0008DCB9 /* Data */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Data;
-		};
-		EEB1D4F327E4E2BA007751BA /* DI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

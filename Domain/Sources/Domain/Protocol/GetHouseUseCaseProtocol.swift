@@ -4,5 +4,5 @@ public protocol GetHouseUseCaseProtocol {
     
     var provider: ProviderProtocol { get }
     
-    func execute(id: String, onCompletion: @escaping (Result<HouseViewData, UseCaseError>) -> Void)
+    func execute(houseID: String, onCompletion: @escaping (Result<HouseViewData, UseCaseError>) -> Void)
 }

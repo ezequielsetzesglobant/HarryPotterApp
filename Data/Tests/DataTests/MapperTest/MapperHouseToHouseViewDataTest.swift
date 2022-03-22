@@ -19,8 +19,8 @@ class MapperHouseToHouseViewDataTest: XCTestCase {
                              traits: [Trait(id: "id",
                                             name: "name")])
     
-    func testTransformHouseToHouseViewData() {
-        let houseViewData = house.transformHouseToHouseViewData()
+    func testToDomain() {
+        let houseViewData = house.toDomain()
         
         XCTAssertEqual(houseViewData.id, house.id)
         XCTAssertEqual(houseViewData.name, house.name)

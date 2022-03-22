@@ -6,7 +6,7 @@ protocol TraitViewModelInputProtocol: AnyObject {
 }
 
 protocol TraitViewModelOutputProtocol: AnyObject {
-    var traits: [TraitViewData] { get set }
+    var traits: [TraitViewData] { get }
 }
 
 protocol TraitViewModelProtocol: TraitViewModelInputProtocol

@@ -12,8 +12,8 @@ public class GetHouseUseCase: GetHouseUseCaseProtocol {
         self.provider = provider
     }
     
-    public func execute(id: String, onCompletion: @escaping (Result<HouseViewData, UseCaseError>) -> Void) {
-        provider.retrieveHouse(id: id) { result in
+    public func execute(houseID: String, onCompletion: @escaping (Result<HouseViewData, UseCaseError>) -> Void) {
+        provider.retrieveHouse(houseID: houseID) { result in
             switch result {
             case .success(let houseViewData):
                 onCompletion(.success(houseViewData))

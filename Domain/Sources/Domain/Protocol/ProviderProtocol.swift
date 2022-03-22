@@ -6,5 +6,5 @@ public enum ProviderError: Error, Equatable {
 
 public protocol ProviderProtocol {
     
-    func retrieveHouse(id: String, onCompletion: @escaping (Result<HouseViewData, ProviderError>) -> Void)
+    func retrieveHouse(houseID: String, onCompletion: @escaping (Result<HouseViewData, ProviderError>) -> Void)
 }

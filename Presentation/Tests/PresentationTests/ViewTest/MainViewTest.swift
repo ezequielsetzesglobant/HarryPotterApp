@@ -8,8 +8,8 @@ class MockMainViewDelegate: MainViewDelegate {
     var tappedExpectation: XCTestExpectation?
     var id: String = ""
 
-    func imagePressed(house: Houses) {
-        self.id = house.rawValue
+    func imagePressed(houseID: HousesID) {
+        self.id = houseID.rawValue
         tappedExpectation?.fulfill()
     }
 

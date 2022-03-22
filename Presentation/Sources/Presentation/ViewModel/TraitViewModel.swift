@@ -3,7 +3,7 @@ import Domain
 
 class TraitViewModel: TraitViewModelProtocol {
     
-    var traits: [TraitViewData]
+    let traits: [TraitViewData]
     
     init(traits: [TraitViewData]) {
         self.traits = traits

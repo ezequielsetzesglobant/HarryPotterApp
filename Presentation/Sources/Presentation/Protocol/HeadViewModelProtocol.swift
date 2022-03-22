@@ -6,7 +6,7 @@ protocol HeadViewModelInputProtocol: AnyObject {
 }
 
 protocol HeadViewModelOutputProtocol: AnyObject {
-    var heads: [HeadViewData] { get set }
+    var heads: [HeadViewData] { get }
 }
 
 protocol HeadViewModelProtocol: HeadViewModelInputProtocol

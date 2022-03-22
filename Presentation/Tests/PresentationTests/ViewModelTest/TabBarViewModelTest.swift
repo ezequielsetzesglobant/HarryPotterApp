@@ -37,7 +37,7 @@ class TabBarViewModelTest: XCTestCase {
     var viewModel: TabBarViewModelProtocol!
 
     func testgetHouseSuccess() throws {
-        viewModel = TabBarViewModel(useCase: GetHouseUseCase(provider: MockProviderSucces()), houseId: "")
+        viewModel = TabBarViewModel(useCase: GetHouseUseCase(provider: MockProviderSucces()), houseID: "")
         view = MockTabBarView(viewModel: viewModel)
         let expectationDescription = expectation(description: "Get House Success")
         viewModel.onFetchHouse = { [weak self] in
@@ -52,7 +52,7 @@ class TabBarViewModelTest: XCTestCase {
     }
     
     func testgetHouseFailure() throws {
-        viewModel = TabBarViewModel(useCase: GetHouseUseCase(provider: MockProviderFailure()), houseId: "")
+        viewModel = TabBarViewModel(useCase: GetHouseUseCase(provider: MockProviderFailure()), houseID: "")
         view = MockTabBarView(viewModel: viewModel)
         let expectationDescription = expectation(description: "Get House Failure")
         viewModel.onError = { [weak self] errorMessage in

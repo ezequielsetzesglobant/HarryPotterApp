@@ -2,7 +2,7 @@ import Foundation
 
 class DetailInformationViewModel: DetailInformationViewModelProtocol {
 
-    var houseDetailInformation: HouseDetailInformation
+    let houseDetailInformation: HouseDetailInformation
     
     init(houseDetailInformation: HouseDetailInformation) {
         self.houseDetailInformation = houseDetailInformation

@@ -12,9 +12,9 @@ class TraitViewController: UIViewController {
         view.backgroundColor = .yellow
         return view
     }()
-    var viewModel: TraitViewModelProtocol?  {
+    var viewModel: TraitViewModelProtocol? {
         didSet {
-            //Cargar vista
+            //Load view
         }
     }
     

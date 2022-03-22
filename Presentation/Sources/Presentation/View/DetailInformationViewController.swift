@@ -14,7 +14,7 @@ class DetailInformationViewController: UIViewController {
     }()
     var viewModel: DetailInformationViewModelProtocol? {
         didSet {
-            //Cargar vista
+            //Load view
         }
     }
     
