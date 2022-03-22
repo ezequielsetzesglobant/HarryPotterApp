@@ -43,20 +43,8 @@ class MainViewController: UIViewController {
 
 extension MainViewController: MainViewDelegate {
     
-    func griffindorImagePressed() {
-        coordinator?.goToTabBarController()
-    }
-
-    func slytherinImagePressed() {
-        coordinator?.goToTabBarController()
-    }
-
-    func hufflepuffImagePressed() {
-        coordinator?.goToTabBarController()
-    }
-
-    func ravenclawImagePressed() {
-        coordinator?.goToTabBarController()
+    func imagePressed(houseID: HousesID) {
+        coordinator?.goToTabBarController(houseID: houseID)
     }
 
     func spellsButtonPressed() {

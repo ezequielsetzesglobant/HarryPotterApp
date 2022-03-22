@@ -67,7 +67,7 @@ class AppCoordinatorTest: XCTestCase {
             handler: nil
         )
 
-        coordinator.goToTabBarController()
+        coordinator.goToTabBarController(houseID: .griffindor)
 
         wait(for: [presentExpectation], timeout: 5)
     }

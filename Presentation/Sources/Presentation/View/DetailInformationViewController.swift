@@ -12,6 +12,11 @@ class DetailInformationViewController: UIViewController {
         view.backgroundColor = .red
         return view
     }()
+    var viewModel: DetailInformationViewModelProtocol? {
+        didSet {
+            //Load view
+        }
+    }
     
     // MARK: - Initialization
     

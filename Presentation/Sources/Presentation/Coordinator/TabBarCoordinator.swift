@@ -1,4 +1,6 @@
 import UIKit
+import Domain
+import Data
 
 private struct Constants {
     static let tabBarSelectedIndex: Int = 0
@@ -30,11 +32,13 @@ public class TabBarCoordinator: TabBarCoordinatorProtocol {
         self.coordinator = coordinator
     }
 
-    public func start() {
-        setUpTabs()
+    public func start(houseID: HousesID) {
+        setUpTabs(houseID: houseID)
     }
-
-    private func setUpTabs() {
+    
+    private func setUpTabs(houseID: HousesID) {
+        tabBarViewController.viewModel = TabBarViewModel(useCase: GetHouseUseCase(provider: Provider()),
+                                                         houseID: houseID.rawValue)
         tabBarViewController.setViewControllers([detailInformationViewController,
                                                  headViewController,
                                                  traitViewController],

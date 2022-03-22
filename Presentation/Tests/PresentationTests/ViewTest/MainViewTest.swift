@@ -4,22 +4,12 @@ import XCTest
 // MARK: - Class
 
 class MockMainViewDelegate: MainViewDelegate {
-    
+
     var tappedExpectation: XCTestExpectation?
+    var id: String = ""
 
-    func griffindorImagePressed() {
-        tappedExpectation?.fulfill()
-    }
-
-    func slytherinImagePressed() {
-        tappedExpectation?.fulfill()
-    }
-
-    func hufflepuffImagePressed() {
-        tappedExpectation?.fulfill()
-    }
-
-    func ravenclawImagePressed() {
+    func imagePressed(houseID: HousesID) {
+        self.id = houseID.rawValue
         tappedExpectation?.fulfill()
     }
 
@@ -69,8 +59,10 @@ class MainViewTest: XCTestCase {
         mainView.delegate = delegate
         
         mainView.griffindorImageTapped()
-        
+                
         waitForExpectations(timeout: 5, handler: nil)
+        
+        XCTAssertEqual(delegate.id, "0367baf3-1cb6-4baf-bede-48e17e1cd005")
     }
     
     func testSlytherinImageTapped() throws {
@@ -79,8 +71,10 @@ class MainViewTest: XCTestCase {
         mainView.delegate = delegate
         
         mainView.slytherinImageTapped()
-        
+                
         waitForExpectations(timeout: 5, handler: nil)
+        
+        XCTAssertEqual(delegate.id, "a9704c47-f92e-40a4-8771-ed1899c9b9c1")
     }
     
     func testHufflepuffImageTapped() throws {
@@ -91,6 +85,8 @@ class MainViewTest: XCTestCase {
         mainView.hufflepuffImageTapped()
         
         waitForExpectations(timeout: 5, handler: nil)
+        
+        XCTAssertEqual(delegate.id, "85af6295-fd01-4170-a10b-963dd51dce14")
     }
     
     func testRavenclawImageTapped() throws {
@@ -101,6 +97,8 @@ class MainViewTest: XCTestCase {
         mainView.ravenclawImageTapped()
         
         waitForExpectations(timeout: 5, handler: nil)
+        
+        XCTAssertEqual(delegate.id, "805fd37a-65ae-4fe5-b336-d767b8b7c73a")
     }
     
     func testSpellsImageTapped() throws {
